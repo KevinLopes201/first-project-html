@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Rounded Elegance';
+    src: url('fonts/Rounded_Elegance.ttf') format('truetype');
+}
+
+*{
+    font-family: 'Rounded Elegance', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background-color:whitesmoke;
+    border-radius: 10px;
+    width: 1000px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, #1168D9, #59A8D9);
+    background-attachment: fixed;
+}
+
+footer{
+    width: 100%;
+    min-height: 150px;
+    background-color: #1168D9;
+    padding: 20px;
+    text-align: center;
+    color: #F2F2F2;
+}
+
+h2{
+    background-color: #59A8D9;
+    padding: 10px 0;
+    text-align: center;
+    color: #F2F2F2;
+}
+
+.form{
+    width: 100%;
+    max-width: 32rem;
+}
+
+.form label, .form input, .form textarea, .form button {
+    display: block;
+    width: 100%;   
+}
+
+.form label {
+    line-height: 1;
+    margin-bottom: 0.5rem;
+
+}
+
+.form input,
+.form textarea {
+    font: inherit;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+}
+
+.form textarea{
+    min-height: 13rem;
+    resize: vertical;
+}
+
+.form input:hover,
+.form input:focus,
+.form textarea:hover,
+.form textarea:focus {
+    outline: none;
+    border-color: #59A8D9;
+    box-shadow: 0 0 0 3px #1168D9;
+}
+
+.form button{
+    display: block;
+    padding: 1rem;
+    background-color: #1168D9;
+    color: #F2F2F2;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    
+}
+
+@media screen and (max-width: 768px){
+    
+}

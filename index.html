@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Atlas Equipamentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2><a href="index.html"><img src="imagens/Atlas_Logo-Centro.png" alt="ATLAS"></a></h2>
+
+    <main>
+        <div class="content">
+            <div class="slides">
+                <input type="radio" name="slide" id="slide1" checked>
+                <input type="radio" name="slide" id="slide2">
+
+                <div class="slide s1">
+                    <img class= "foto" src="imagens/Slides/Slide 1.png" alt="Slide 1">
+                </div>
+                <div class="slide s">
+                    <img class= "foto" src="imagens/Slides/slide 2.png" alt="Slide 2">
+                </div>
+            </div>
+            <div class="navigation">
+                <label class="bar" for="slide1"></label>
+                <label class="bar" for="slide2"></label>
+            </div>
+        </div>
+        <hr>
+        <h2>PRODUTOS</h2>
+        <div id="produtos">
+        </div>
+        <br>
+        
+    </main>
+    <footer>
+        ENDEREÇO: RUA XPTO, 000 - CIDADE INDUSTRIAL DE CURITIBA
+        <br>
+        <br>
+        TELEFONE: (41) 9 9999-9999
+        <br>
+        <br>
+        E-MAIL: contatosatlasadm@gmail.com
+    </footer>
+
+    <script>
+        const itens = [
+            {
+                id: 0,
+                nome: 'Avental',
+                img: 'imagens/produtos/aventais/avental.png',
+                download_ficha: 'Ficha tecnica.pdf',
+                download_CA: 'CA36681.pdf',
+                CA: 36681
+            },
+            {
+                id: 1,
+                nome: 'Mascara Tripla',
+                img: 'imagens/produtos/mascaras/mascara-tripla.png',
+                download_ficha: 'Ficha tecnica.pdf',
+                download_CA: 'CA36681.pdf',
+                CA: 36681
+            },
+            {
+                id: 2,
+                nome: 'Mascara Pff2',
+                img: 'imagens/produtos/mascaras/pff2-azul.png',
+                download_ficha: 'Ficha tecnica.pdf',
+                download_CA: 'CA36681.pdf',
+                CA: 36681
+            },
+            {
+                id: 3,
+                nome: 'Mascara Pff2',
+                img: 'imagens/produtos/mascaras/pff2-branca.png',
+                download_ficha: 'Ficha tecnica.pdf',
+                download_CA: 'CA36681.pdf',
+                CA: 36681
+            },
+            {
+                id: 4,
+                nome: 'Luva',
+                img: 'imagens/produtos/luvas/luva1.png',
+                download_ficha: 'Ficha tecnica.pdf',
+                download_CA: 'CA36681.pdf',
+                CA: 36681
+            },
+            {
+                id: 5,
+                nome: 'Luva',
+                img: 'imagens/produtos/luvas/luva2.png',
+                download_ficha: 'Ficha tecnica.pdf',
+                download_CA: 'CA36681.pdf',
+                CA: 36681
+            },
+            {
+                id: 6,
+                nome: 'Luva de procedimento - LATEX C/PÓ',
+                img: 'imagens/produtos/luvas-procedimento/luva-pr.png',
+                download_ficha: 'Ficha tecnica.pdf',
+                download_CA: 'CA36681.pdf',
+                CA: 36681
+            },
+            {
+                id: 7,
+                nome: 'Luva de procedimento - NITRILE S/PÓ',
+                img: 'imagens/produtos/luvas-procedimento/luva-pr1.png',
+                download_ficha: 'Ficha tecnica.pdf',
+                download_CA: 'CA36681.pdf',
+                CA: 36681
+            },
+            {
+                id: 8,
+                nome: 'Luva de procedimento - VINIL C/PÓ',
+                img: 'imagens/produtos/luvas-procedimento/luva-pr2.png',
+                download_ficha: 'Ficha tecnica.pdf',
+                download_CA: 'CA36681.pdf',
+                CA: 36681
+            }
+        ]
+
+        inializarLoja = () => {
+            var containerPodutos = document.getElementById('produtos');
+            itens.map((val) =>{
+                containerPodutos.innerHTML+= `
+                <div class="produto-single">
+                    <img src="`+val.img+`" />
+                    <p>`+val.nome+`<br>
+                        <a id="description" key="`+val.CA+`" href="`+val.download_CA+`" download="`+val.download_CA+`" target="_blank" rel="external">CA:`+val.CA+`</a>
+                        <a id="description" key="Ficha" href="`+val.download_ficha+`" download="`+val.download_ficha+`" target="_blank" rel="external">Ficha Técnica</a>
+                    </p>
+                    <a key="`+val.id+`" href="orcamento.html">Fazer Orçamento</a>
+                    </div>               
+                `;
+            })
+        }
+
+        inializarLoja();
+
+
+    </script>
+   
+</body>
+
+</html>
